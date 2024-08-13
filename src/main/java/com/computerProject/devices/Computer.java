@@ -4,10 +4,14 @@ public class Computer {
 
     private String brand;
     private String model;
+    private CPU cpu;
+    private GPU gpu;
 
-    public Computer(String brand, String model) {
+    public Computer(String brand, String model, CPU cpu, GPU gpu) {
         this.brand = brand;
         this.model = model;
+        this.cpu = cpu;
+        this.gpu = gpu;
     }
 
     public String getBrand() {
@@ -24,5 +28,21 @@ public class Computer {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public CPU getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(CPU cpu) {
+        this.cpu = cpu;
+    }
+
+    public GPU getGpu() {
+        return gpu;
+    }
+
+    public void setGpu(GPU gpu) {
+        this.gpu = gpu;
     }
 }

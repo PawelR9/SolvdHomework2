@@ -1,19 +1,11 @@
 package main.java.com.computerProject.devices;
 
-public class Server extends Desktop{
+public class Server extends Desktop {
 
-    private String additionalInfo;
+    private String numberOfCPUs;
 
-    public Server(String model, String brand, String size, String additionalInfo) {
-        super(model, brand, size);
-        this.additionalInfo = additionalInfo;
-    }
-
-    public String getAdditionalInfo() {
-        return additionalInfo;
-    }
-
-    public void setNumberOfCoresCPU(String additionalInfo) {
-        this.additionalInfo = additionalInfo;
+    public Server(String brand, String model, String size, CPU cpu, GPU gpu, String numberOfCPUs) {
+        super(brand, model, size, cpu, gpu);
+        this.numberOfCPUs = numberOfCPUs;
     }
 }

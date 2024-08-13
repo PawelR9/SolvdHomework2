@@ -1,11 +1,10 @@
 package main.java.com.computerProject.devices;
 
 public class Desktop extends Computer {
-
     private String size;
 
-    public Desktop(String model, String brand, String size) {
-        super(model, brand);
+    public Desktop(String model, String brand, String size, CPU cpu, GPU gpu) {
+        super(model, brand, cpu, gpu);
         this.size = size;
     }
 
