@@ -26,4 +26,18 @@ public class Laptop extends Computer {
     public void setScreenType(String screenType) {
         this.screenType = screenType;
     }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Laptop: " + this);
+        System.out.println("Screen size: " + screenSize + "\"");
+        System.out.println("Screen type: " + screenType);
+        System.out.println("CPU: " + cpu);
+        System.out.println("GPU: " + gpu);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Screen: " + screenSize + "\" " + screenType;
+    }
 }

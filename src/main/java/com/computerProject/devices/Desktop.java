@@ -15,4 +15,18 @@ public class Desktop extends Computer {
     public void setSize(String size) {
         this.size = size;
     }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Desktop: " + this);
+        System.out.println("Size: " + size);
+        System.out.println("CPU: " + cpu);
+        System.out.println("GPU: " + gpu);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Size: " + size;
+    }
 }
+

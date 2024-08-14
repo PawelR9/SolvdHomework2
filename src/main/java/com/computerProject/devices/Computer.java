@@ -1,48 +1,37 @@
 package main.java.com.computerProject.devices;
 
-public class Computer {
+public class Computer extends Device {
 
-    private String brand;
-    private String model;
-    private CPU cpu;
-    private GPU gpu;
+    protected CPU cpu;
+    protected GPU gpu;
 
     public Computer(String brand, String model, CPU cpu, GPU gpu) {
-        this.brand = brand;
-        this.model = model;
+        super(brand, model);
         this.cpu = cpu;
         this.gpu = gpu;
     }
 
-    public String getBrand() {
-        return brand;
+    @Override
+    public void displayInfo() {
+        System.out.println("Computer: " + this);
+        System.out.println("CPU: " + cpu);
+        System.out.println("GPU: " + gpu);
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    @Override
+    public String toString() {
+        return super.toString() + ", CPU: " + cpu.getName() + ", GPU: " + gpu.getGPUName();
     }
 
-    public String getModel() {
-        return model;
+    @Override
+    public int hashCode() {
+        return super.hashCode() + cpu.hashCode() + gpu.hashCode();
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public CPU getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(CPU cpu) {
-        this.cpu = cpu;
-    }
-
-    public GPU getGpu() {
-        return gpu;
-    }
-
-    public void setGpu(GPU gpu) {
-        this.gpu = gpu;
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) return false;
+        Computer computer = (Computer) obj;
+        return cpu.equals(computer.cpu) && gpu.equals(computer.gpu);
     }
 }

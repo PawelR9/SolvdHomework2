@@ -1,8 +1,8 @@
 package main.java.com.computerProject.devices;
 
 public class GPU {
-    private String GPUName;
-    private int memory;
+    protected String GPUName;
+    protected int memory;
 
     public GPU(String GPUName, int memory) {
         this.GPUName = GPUName;
@@ -24,4 +24,23 @@ public class GPU {
     public void setMemory(int memory) {
         this.memory = memory;
     }
+
+    @Override
+    public String toString() {
+        return GPUName + " with " + memory + "GB of memory";
+    }
+
+    @Override
+    public int hashCode() {
+        return GPUName.hashCode() + memory;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        GPU gpu = (GPU) obj;
+        return GPUName.equals(gpu.GPUName) && memory == gpu.memory;
+    }
 }
+
