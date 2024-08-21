@@ -19,10 +19,17 @@ public class Main {
         CPU desktopCpu = new CPU("Intel Core i7-14700F", 20);
         GPU desktopGpu = new GPU("NVIDIA GeForce RTX 4070 Super", 12);
 
-        Device generalComputer = new Computer("General Brand", "General model", generalCPU, generalGpu);
-        Device laptop = new Laptop("Acer", "Aspire 3", 17.3, "IPS", laptopCpu, laptopGpu);
-        Device server = new Server("Dell", "PowerEdge T350", "standard", serverCpu, serverGpu, 1);
-        Device desktop = new Desktop("G4M3R", "HERO", "Standard", desktopCpu, desktopGpu);
+        Warranty deviceWarranty = new Warranty();
+
+        Device generalComputer = new Computer("General Brand", "General model", generalCPU, generalGpu, deviceWarranty);
+
+        Laptop laptop = new Laptop("Acer", "Aspire 3", 17.3, "IPS", laptopCpu, laptopGpu, deviceWarranty);
+        laptop.checkIfBatteryIsCharged();
+        laptop.checkPowerStatus();
+        laptop.checkAvailableUpdates();
+
+        Device server = new Server("Dell", "PowerEdge T350", "standard", serverCpu, serverGpu, deviceWarranty, 1);
+        Device desktop = new Desktop("G4M3R", "HERO", "Standard", desktopCpu, desktopGpu, deviceWarranty);
 
         System.out.println();
         generalComputer.displayInfo();
@@ -32,9 +39,10 @@ public class Main {
         server.displayInfo();
         System.out.println();
         desktop.displayInfo();
+
+        System.out.println();
+        Computer.displayQuantityOfComputers();
     }
-
-
 
 
 }

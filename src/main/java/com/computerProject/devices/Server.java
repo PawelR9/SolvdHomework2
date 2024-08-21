@@ -4,9 +4,18 @@ public class Server extends Desktop {
 
     private int numberOfCPUs;
 
-    public Server(String brand, String model, String size, CPU cpu, GPU gpu, int numberOfCPUs) {
-        super(brand, model, size, cpu, gpu);
+    public int getNumberOfCPUs() {
+        return numberOfCPUs;
+    }
+
+    public void setNumberOfCPUs(int numberOfCPUs) {
         this.numberOfCPUs = numberOfCPUs;
+    }
+
+    public Server(String brand, String model, String size, CPU cpu, GPU gpu, Warranty warranty, int numberOfCPUs) {
+        super(brand, model, size, cpu, gpu, warranty);
+        this.numberOfCPUs = numberOfCPUs;
+        numberOfComputers++;
     }
 
     @Override

@@ -1,14 +1,17 @@
 package main.java.com.computerProject.devices;
 
-public class Laptop extends Computer {
+import main.java.com.computerProject.interfaces.Batteryable;
+
+public class Laptop extends Computer implements Batteryable {
 
     private double screenSize;
     private String screenType;
 
-    public Laptop(String brand, String model, double screenSize, String screenType, CPU cpu, GPU gpu) {
-        super(brand, model, cpu, gpu);
+    public Laptop(String brand, String model, double screenSize, String screenType, CPU cpu, GPU gpu, Warranty warranty) {
+        super(brand, model, cpu, gpu, warranty);
         this.screenSize = screenSize;
         this.screenType = screenType;
+        numberOfComputers++;
     }
 
     public double getScreenSize() {
@@ -39,5 +42,10 @@ public class Laptop extends Computer {
     @Override
     public String toString() {
         return super.toString() + ", Screen: " + screenSize + "\" " + screenType;
+    }
+
+    @Override
+    public void batteryIsCharging() {
+        System.out.println("Battery is charging properly");
     }
 }

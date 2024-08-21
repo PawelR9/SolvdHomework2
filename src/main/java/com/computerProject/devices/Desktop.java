@@ -3,9 +3,10 @@ package main.java.com.computerProject.devices;
 public class Desktop extends Computer {
     private String size;
 
-    public Desktop(String model, String brand, String size, CPU cpu, GPU gpu) {
-        super(model, brand, cpu, gpu);
+    public Desktop(String model, String brand, String size, CPU cpu, GPU gpu, Warranty warranty) {
+        super(model, brand, cpu, gpu, warranty);
         this.size = size;
+        numberOfComputers++;
     }
 
     public String getSize() {
