@@ -1,33 +1,28 @@
 package main.java.com.computerProject.devices;
 
+import main.java.com.computerProject.exceptions.BatteryLowException;
 import main.java.com.computerProject.interfaces.Batteryable;
 
 public class Laptop extends Computer implements Batteryable {
 
     private double screenSize;
     private String screenType;
+    private int batteryLevel;
 
     public Laptop(String brand, String model, double screenSize, String screenType, CPU cpu, GPU gpu, Warranty warranty) {
         super(brand, model, cpu, gpu, warranty);
         this.screenSize = screenSize;
         this.screenType = screenType;
+        this.batteryLevel = 100;
         numberOfComputers++;
     }
 
-    public double getScreenSize() {
-        return screenSize;
-    }
-
-    public void setScreenSize(double screenSize) {
-        this.screenSize = screenSize;
-    }
-
-    public String getScreenType() {
-        return screenType;
-    }
-
-    public void setScreenType(String screenType) {
-        this.screenType = screenType;
+    @Override
+    public void useBattery(int usage) throws BatteryLowException {
+        this.batteryLevel -= usage;
+        if (this.batteryLevel < 10) {
+            throw new BatteryLowException("Battery level is too low! Only " + this.batteryLevel + "% left.");
+        }
     }
 
     @Override
@@ -48,4 +43,21 @@ public class Laptop extends Computer implements Batteryable {
     public void batteryIsCharging() {
         System.out.println("Battery is charging properly");
     }
+
+    public double getScreenSize() {
+        return screenSize;
+    }
+
+    public void setScreenSize(double screenSize) {
+        this.screenSize = screenSize;
+    }
+
+    public String getScreenType() {
+        return screenType;
+    }
+
+    public void setScreenType(String screenType) {
+        this.screenType = screenType;
+    }
+
 }
