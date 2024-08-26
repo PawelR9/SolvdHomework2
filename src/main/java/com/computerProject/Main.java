@@ -11,16 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try {
-            handleDevices();
-        } catch (Exception e) {
-            System.out.println("An unexpected error occurred: " + e.getMessage());
-        }
-
         tryWithResourcesExample();
-    }
 
-    private static void handleDevices() {
+
         CPU generalCPU = new CPU("Intel Core i3", 4);
         GPU generalGpu = new GPU("Intel Integrated Graphics", 0);
 
