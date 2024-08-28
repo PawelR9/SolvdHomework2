@@ -8,12 +8,18 @@ import main.java.com.computerProject.interfaces.Networkable;
 import main.java.com.computerProject.interfaces.Powerable;
 import main.java.com.computerProject.interfaces.Upgradeable;
 
+import java.util.*;
+
 public class Computer extends Device implements Diagnosable, Networkable, Powerable, Upgradeable {
 
     public static int numberOfComputers = 0;
     protected CPU cpu;
     protected GPU gpu;
     private double temperature;
+
+    private List<String> components;
+    private Map<String,String> configuration;
+    private Stack<String> operationHistory;
 
     static {
         System.out.println("This static block in Computer class is executed.");
@@ -24,10 +30,25 @@ public class Computer extends Device implements Diagnosable, Networkable, Powera
         this.cpu = cpu;
         this.gpu = gpu;
         this.temperature = 30;
+        this.components = new ArrayList<>();
+        this.configuration = new HashMap<>();
+        this.operationHistory = new Stack<>();
     }
 
     public static void displayQuantityOfComputers() {
         System.out.println("It is " + numberOfComputers + " computers");
+    }
+
+    public void addComponent(String component) {
+        components.add(component);
+    }
+
+    public void addConfiguration (String key, String value) {
+        configuration.put(key,value);
+    }
+
+    public void addOperationToHistory(String operation) {
+        operationHistory.push(operation);
     }
 
     @Override
