@@ -1,4 +1,4 @@
-package main.java.com.computerProject.devices;
+package com.computerProject.devices;
 
 public class Desktop extends Computer {
     private String size;

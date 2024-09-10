@@ -1,6 +1,6 @@
-package main.java.com.computerProject.interfaces;
+package com.computerProject.interfaces;
 
-import main.java.com.computerProject.exceptions.NetworkConnectionException;
+import com.computerProject.exceptions.NetworkConnectionException;
 
 public interface Networkable {
 

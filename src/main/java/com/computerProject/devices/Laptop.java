@@ -1,7 +1,7 @@
-package main.java.com.computerProject.devices;
+package com.computerProject.devices;
 
-import main.java.com.computerProject.exceptions.BatteryLowException;
-import main.java.com.computerProject.interfaces.Batteryable;
+import com.computerProject.exceptions.BatteryLowException;
+import com.computerProject.interfaces.Batteryable;
 
 public class Laptop extends Computer implements Batteryable {
 

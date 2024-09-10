@@ -1,7 +1,7 @@
-package main.java.com.computerProject.devices;
+package com.computerProject.devices;
 
-import main.java.com.computerProject.exceptions.PowerFailureException;
-import main.java.com.computerProject.interfaces.Powerable;
+import com.computerProject.exceptions.PowerFailureException;
+import com.computerProject.interfaces.Powerable;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package main.java.com.computerProject.exceptions;
+package com.computerProject.exceptions;
 
 public class PowerFailureException extends RuntimeException {
     public PowerFailureException(String message) {

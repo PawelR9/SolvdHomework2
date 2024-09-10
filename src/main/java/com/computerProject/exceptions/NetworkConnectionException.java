@@ -1,4 +1,4 @@
-package main.java.com.computerProject.exceptions;
+package com.computerProject.exceptions;
 
 public class NetworkConnectionException extends Exception {
     public NetworkConnectionException(String message) {

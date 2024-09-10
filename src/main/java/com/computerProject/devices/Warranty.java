@@ -1,4 +1,4 @@
-package main.java.com.computerProject.devices;
+package com.computerProject.devices;
 
 import java.time.LocalDate;
 import java.util.Random;

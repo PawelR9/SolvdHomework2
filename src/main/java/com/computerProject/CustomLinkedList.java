@@ -1,4 +1,4 @@
-package main.java.com.computerProject;
+package com.computerProject;
 
 public class CustomLinkedList<T> {
     private Node<T> head;

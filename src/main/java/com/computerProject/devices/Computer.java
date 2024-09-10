@@ -1,12 +1,12 @@
-package main.java.com.computerProject.devices;
+package com.computerProject.devices;
 
-import main.java.com.computerProject.exceptions.InvalidUpgradeException;
-import main.java.com.computerProject.exceptions.NetworkConnectionException;
-import main.java.com.computerProject.exceptions.OverheatingException;
-import main.java.com.computerProject.interfaces.Diagnosable;
-import main.java.com.computerProject.interfaces.Networkable;
-import main.java.com.computerProject.interfaces.Powerable;
-import main.java.com.computerProject.interfaces.Upgradeable;
+import com.computerProject.exceptions.InvalidUpgradeException;
+import com.computerProject.exceptions.NetworkConnectionException;
+import com.computerProject.exceptions.OverheatingException;
+import com.computerProject.interfaces.Diagnosable;
+import com.computerProject.interfaces.Networkable;
+import com.computerProject.interfaces.Powerable;
+import com.computerProject.interfaces.Upgradeable;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
-package main.java.com.computerProject.interfaces;
+package com.computerProject.interfaces;
 
-import main.java.com.computerProject.exceptions.InvalidUpgradeException;
+import com.computerProject.exceptions.InvalidUpgradeException;
 
 public interface Upgradeable {
     void upgrade(String component) throws InvalidUpgradeException;

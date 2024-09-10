@@ -1,6 +1,6 @@
-package main.java.com.computerProject.interfaces;
+package com.computerProject.interfaces;
 
-import main.java.com.computerProject.exceptions.BatteryLowException;
+import com.computerProject.exceptions.BatteryLowException;
 
 public interface Batteryable {
     void batteryIsCharging();

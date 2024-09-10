@@ -1,7 +1,7 @@
-package main.java.com.computerProject;
+package com.computerProject;
 
-import main.java.com.computerProject.devices.*;
-import main.java.com.computerProject.exceptions.*;
+import com.computerProject.devices.*;
+import com.computerProject.exceptions.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

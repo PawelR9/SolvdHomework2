@@ -1,4 +1,4 @@
-package main.java.com.computerProject.interfaces;
+package com.computerProject.interfaces;
 
 public interface Powerable {
 

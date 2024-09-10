@@ -1,6 +1,6 @@
-package main.java.com.computerProject.interfaces;
+package com.computerProject.interfaces;
 
-import main.java.com.computerProject.exceptions.OverheatingException;
+import com.computerProject.exceptions.OverheatingException;
 
 public interface Diagnosable {
     void repair();
