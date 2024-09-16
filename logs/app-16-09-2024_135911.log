@@ -1,0 +1,18 @@
+2024-09-16 13:59:11,709 INFO c.c.Streams [main] Short names: [Anna, Leo, Paul, Lisa, Lisa, Anna]
+2024-09-16 13:59:11,711 INFO c.c.Streams [main] Upper case names: [ANNA, MARIA, JESSIE, LEO, PAUL, SALMA, LISA, MARIA, LISA, ANNA]
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Anna
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Maria
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Jessie
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Leo
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Paul
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Salma
+2024-09-16 13:59:11,712 INFO c.c.Streams [main] Name: Lisa
+2024-09-16 13:59:11,713 INFO c.c.Streams [main] Name: Maria
+2024-09-16 13:59:11,713 INFO c.c.Streams [main] Name: Lisa
+2024-09-16 13:59:11,713 INFO c.c.Streams [main] Name: Anna
+2024-09-16 13:59:11,713 INFO c.c.Streams [main] Sorted names:[Anna, Anna, Jessie, Leo, Lisa, Lisa, Maria, Maria, Paul, Salma]
+2024-09-16 13:59:11,714 INFO c.c.Streams [main] Unique names: [Anna, Maria, Jessie, Leo, Paul, Salma, Lisa]
+2024-09-16 13:59:11,714 INFO c.c.Streams [main] Unique and sorted names: [Anna, Jessie, Leo, Lisa, Maria, Paul, Salma]
+2024-09-16 13:59:11,716 INFO c.c.Streams [main] Number of names: 10
+2024-09-16 13:59:11,716 INFO c.c.Streams [main] Number of unique names: 7
+2024-09-16 13:59:11,719 INFO c.c.Streams [main] Reduced names: Anna, Maria, Jessie, Leo, Paul, Salma, Lisa, Maria, Lisa, Anna
